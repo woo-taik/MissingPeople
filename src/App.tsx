@@ -5,6 +5,7 @@ import Community from './pages/Community'
 import Consulting from './pages/Consulting'
 import Familly from './pages/Familly'
 import Home from './pages/Home'
+import Kakao from './pages/Kakao'
 import Mymenu from './pages/Mymenu'
 import Signin from './pages/Signin'
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/myMenu" element={<Mymenu />} />
           <Route path="/community" element={<Community />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/callback/kakaotalk" element={<Kakao />} />
         </Routes>
       </AuthGuard>
     </BrowserRouter>

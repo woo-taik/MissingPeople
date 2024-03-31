@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 
 export const colorPalette = css`
   :root {
+    --yellow: rgba(255, 221, 51, 1);
     --gray: rgba(58, 58, 58, 1);
     --gray20: rgba(58, 58, 58, 0.02);
     --gray50: rgba(58, 58, 58, 0.05);
@@ -34,6 +35,7 @@ export const colorPalette = css`
 `
 
 export const colors = {
+  yellow: 'var(--yellow)',
   gray: 'var(--gray)',
   gray20: 'var(--gray20)',
   gray50: 'var(--gray50)',

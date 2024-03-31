@@ -1,5 +1,7 @@
 import GoogleSignIn from '@/components/auth/GoogleSignin'
+import KakaoSignin from '@/components/auth/KakaoSignin'
 import Flex from '@/components/shared/Flex'
+import Spacing from '@/components/shared/Spacing'
 import { colors } from '@/styles/colorPalette'
 import { css } from '@emotion/react'
 
@@ -15,8 +17,15 @@ export default function Signin() {
         background: `${colors.gray100}`,
       }}
     >
-      <Flex css={ContainerStyle}>
+      <Flex
+        justify="center"
+        align="center"
+        direction="column"
+        css={ContainerStyle}
+      >
         <GoogleSignIn />
+        <Spacing direction="vertical" size={10} />
+        <KakaoSignin />
       </Flex>
     </div>
   )
@@ -28,6 +37,4 @@ const ContainerStyle = css`
   width: 650px;
   height: 550px;
   border-radius: 10px;
-  justify-content: center;
-  align-items: center;
 `
