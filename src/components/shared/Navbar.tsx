@@ -5,9 +5,10 @@ import { colors } from '@/styles/colorPalette'
 import { useCallback } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Text from './Text'
+import useUser from '@/hooks/auth/useUser'
 
 export default function Navbar() {
-  const user = null
+  const user = useUser()
 
   const renderButton = useCallback(() => {
     if (user != null) {
@@ -15,7 +16,7 @@ export default function Navbar() {
         <Link to="/my">
           <img
             src={
-              user ??
+              user.photoURL ??
               'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-64.png'
             }
             alt="user's_image"

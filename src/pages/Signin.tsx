@@ -1,3 +1,4 @@
+import GoogleSignIn from '@/components/auth/GoogleSignin'
 import Flex from '@/components/shared/Flex'
 import { colors } from '@/styles/colorPalette'
 import { css } from '@emotion/react'
@@ -14,7 +15,9 @@ export default function Signin() {
         background: `${colors.gray100}`,
       }}
     >
-      <Flex css={ContainerStyle}></Flex>
+      <Flex css={ContainerStyle}>
+        <GoogleSignIn />
+      </Flex>
     </div>
   )
 }
@@ -25,4 +28,6 @@ const ContainerStyle = css`
   width: 650px;
   height: 550px;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 `
